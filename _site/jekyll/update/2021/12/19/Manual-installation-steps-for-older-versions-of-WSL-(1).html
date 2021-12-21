@@ -1,0 +1,53 @@
+<h2 id="in-this-article">In this article</h2>
+
+<blockquote>
+  <p>Step 1 - Enable the Windows Subsystem for Linux<br />
+Step 2 - Check requirements for running WSL 2<br />
+Step 3 - Enable Virtual Machine feature</p>
+</blockquote>
+
+<p>For simplicity, we generally recommend using the wsl –install to install Windows Subsystem for Linux, but if you’re running an older build of Windows, that may not be supported. We have included the manual installation steps below. If you run into an issue during the install process, check the installation section of the troubleshooting guide.</p>
+
+<hr />
+
+<h1 id="step-1---enable-the-windows-subsystem-for-linux">Step 1 - Enable the Windows Subsystem for Linux</h1>
+
+<p>You must first enable the “Windows Subsystem for Linux” optional feature before installing any Linux distributions on Windows.</p>
+
+<p>Open PowerShell as Administrator (Start menu &gt; PowerShell &gt; right-click &gt; Run as Administrator) and enter this command:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+</code></pre></div></div>
+<p>We recommend now moving on to step #2, updating to WSL 2, but if you wish to only install WSL 1, you can now <strong>restart</strong> your machine and move on to Step 6 - Install your Linux distribution of choice. To update to WSL 2, <strong>wait to restart</strong> your machine and move on to the next step.</p>
+
+<hr />
+
+<h1 id="step-2---check-requirements-for-running-wsl-2">Step 2 - Check requirements for running WSL 2</h1>
+
+<p>To update to WSL 2, you must be running Windows 10.</p>
+
+<ul>
+  <li>For x64 systems: Version 1903 or higher, with Build 18362 or higher.</li>
+  <li>For ARM64 systems: Version 2004 or higher, with Build 19041 or higher.</li>
+  <li>Builds lower than 18362 do not support WSL 2. Use the <a href="https://www.microsoft.com/th-th/software-download/windows10">Windows Update Assistant</a> to update your version of Windows.</li>
+</ul>
+
+<p>To check your version and build number, select <strong>Windows logo key + R</strong>, type winver, select OK. Update to the latest Windows version in the Settings menu.</p>
+
+<hr />
+
+<h1 id="step-3---enable-virtual-machine-feature">Step 3 - Enable Virtual Machine feature</h1>
+
+<p>Before installing WSL 2, you must enable the <strong>Virtual Machine Platform</strong> optional feature. Your machine will require <a href="https://docs.microsoft.com/en-us/windows/wsl/troubleshooting#error-0x80370102-the-virtual-machine-could-not-be-started-because-a-required-feature-is-not-installed">virtualization capabilities</a> to use this feature.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+</code></pre></div></div>
+<p><strong>Restart</strong> your machine to complete the WSL install and update to WSL 2.</p>
+
+<hr />
+<p><strong>Next</strong> <a href="http://localhost:4000/jekyll/update/2021/12/18/Manual-installation-steps-for-older-versions-of-WSL-(2).html">Manual installation steps for older versions of WSL (2)</a></p>
+
+<hr />
+<p>Reference<br />
+<a href="https://docs.microsoft.com/en-us/windows/wsl/install-manual">Manual installation steps for older versions of WSL</a>, Windows technical documentation, Dec. ,19,2021</p>
+

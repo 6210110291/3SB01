@@ -1,0 +1,89 @@
+<h2 id="in-this-article">In this article</h2>
+
+<blockquote>
+  <p>Step 4 - Download the Linux kernel update package<br />
+Step 5 - Set WSL 2 as your default version<br />
+Step 6 - Install your Linux distribution of choice</p>
+</blockquote>
+
+<p>For simplicity, we generally recommend using the wsl –install to install Windows Subsystem for Linux, but if you’re running an older build of Windows, that may not be supported. We have included the manual installation steps below. If you run into an issue during the install process, check the installation section of the troubleshooting guide.</p>
+
+<hr />
+
+<h1 id="step-4---download-the-linux-kernel-update-package">Step 4 - Download the Linux kernel update package</h1>
+
+<ol>
+  <li>
+    <p>Download the latest package: <a href="https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi">WSL2 Linux kernel update package for x64 machines</a></p>
+  </li>
+  <li>
+    <p>Run the update package downloaded in the previous step. (Double-click to run - you will be prompted for elevated permissions, select ‘yes’ to approve this installation.)</p>
+  </li>
+</ol>
+
+<p>Once the installation is complete, move on to the next step - setting WSL 2 as your default version when installing new Linux distributions. (Skip this step if you want your new Linux installs to be set to WSL 1).</p>
+
+<blockquote>
+  <p>Note</p>
+
+  <p>For more information, read the article changes to updating the WSL2 Linux kernel, available on the Windows Command Line Blog.</p>
+</blockquote>
+
+<hr />
+
+<h1 id="step-5---set-wsl-2-as-your-default-version">Step 5 - Set WSL 2 as your default version</h1>
+
+<p>Open PowerShell and run this command to set WSL 2 as the default version when installing a new Linux distribution:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wsl --set-default-version 2
+</code></pre></div></div>
+
+<hr />
+
+<h1 id="step-6---install-your-linux-distribution-of-choice">Step 6 - Install your Linux distribution of choice</h1>
+
+<ol>
+  <li>Open the <a href="https://aka.ms/wslstore">Microsoft Store</a> and select your favorite Linux distribution.</li>
+</ol>
+
+<p><img src="https://docs.microsoft.com/en-us/windows/wsl/media/store.png" alt="" /></p>
+
+<p>The following links will open the Microsoft store page for each distribution:</p>
+
+<ul>
+  <li><a href="https://www.microsoft.com/store/apps/9N9TNGVNDL3Q">Ubuntu 18.04 LTS</a></li>
+  <li><a href="https://www.microsoft.com/store/apps/9n6svws3rx71">Ubuntu 20.04 LTS</a></li>
+  <li><a href="https://www.microsoft.com/store/apps/9NJFZK00FGKV">openSUSE Leap 15.1</a></li>
+  <li><a href="https://www.microsoft.com/store/apps/9MZ3D1TRP8T1">SUSE Linux Enterprise Server 12 SP5</a></li>
+  <li><a href="https://www.microsoft.com/store/apps/9PN498VPMF3Z">SUSE Linux Enterprise Server 15 SP1</a></li>
+  <li><a href="https://www.microsoft.com/store/apps/9PKR34TNCV07">Kali Linux</a></li>
+  <li><a href="https://www.microsoft.com/store/apps/9MSVKQC78PK6">Debian GNU/Linux</a></li>
+  <li><a href="https://www.microsoft.com/store/apps/9n6gdm4k2hnc">Fedora Remix for WSL</a></li>
+  <li><a href="https://www.microsoft.com/store/apps/9NV1GV1PXZ6P">Pengwin</a></li>
+  <li><a href="https://www.microsoft.com/store/apps/9N8LP0X93VCP">Pengwin Enterprise</a></li>
+  <li><a href="https://www.microsoft.com/store/apps/9p804crf0395">Alpine WSL</a></li>
+  <li><a href="https://www.microsoft.com/store/apps/9msmjqd017x7">Raft(Free Trial)</a></li>
+</ul>
+
+<ol>
+  <li>From the distribution’s page, select “Get”.</li>
+</ol>
+
+<p><img src="https://docs.microsoft.com/en-us/windows/wsl/media/ubuntustore.png" alt="" /></p>
+
+<p>The first time you launch a newly installed Linux distribution, a console window will open and you’ll be asked to wait for a minute or two for files to de-compress and be stored on your PC. All future launches should take less than a second.</p>
+
+<p>You will then need to <a href="https://docs.microsoft.com/en-us/windows/wsl/setup/environment#set-up-your-linux-username-and-password">create a user account and password for your new Linux distribution</a>.</p>
+
+<p><img src="https://docs.microsoft.com/en-us/windows/wsl/media/ubuntuinstall.png" alt="" /></p>
+
+<p><strong>CONGRATULATIONS! You’ve successfully installed and set up a Linux distribution that is completely integrated with your Windows operating system!</strong></p>
+
+<hr />
+
+<p><strong>Back</strong> <a href="http://localhost:4000/jekyll/update/2021/12/18/Manual-installation-steps-for-older-versions-of-WSL-(1).html">Manual installation steps for older versions of WSL (1)</a></p>
+
+<hr />
+<p>Reference<br />
+<a href="https://docs.microsoft.com/en-us/windows/wsl/install-manual">Manual installation steps for older versions of WSL</a>, Windows technical documentation, Dec. ,19,2021</p>
+

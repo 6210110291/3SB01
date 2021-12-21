@@ -1,0 +1,18 @@
+---
+layout: post
+title:  "ROV AIC 2021"
+date:   2021-12-22 20:39:47 +0700
+categories: jekyll update
+---
+
+"บุรีรัมย์" แซงดับเวียดนามคว้าแชมป์ ROV AIC 2021 รับทรัพย์ 13 ล้านบาท
+
+---
+![](/e-sport.png)
+
+
+
+
+[jekyll-docs]: https://jekyllrb.com/docs/home
+[jekyll-gh]:   https://github.com/jekyll/jekyll
+[jekyll-talk]: https://talk.jekyllrb.com/
